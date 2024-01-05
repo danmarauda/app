@@ -21,19 +21,7 @@ const User = () => {
             href="https://standardnotes.com/help"
             rel="noopener"
             target="_blank"
-          >
-            Need help?
-          </a>
-        </div>
-      )}
-      <div className="sk-panel-row">
-        <div className="sk-panel-column">
-          <div className="sk-h1 sk-bold wrap">{user.email}</div>
-          <div className="sk-subtitle neutral">{server}</div>
-        </div>
-      </div>
-      <div className="sk-panel-row" />
-    </div>
+        
   )
 }
 
