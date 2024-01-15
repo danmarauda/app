@@ -1,6 +1,97 @@
 {
   "versions": [
     {
+      "version": "3.184.3",
+      "title": "[3.184.3](https://github.com/standardnotes/app/compare/@standardnotes/web@3.184.2...@standardnotes/web@3.184.3) (2024-01-12)",
+      "date": null,
+      "body": "**Note:** Version bump only for package @standardnotes/web",
+      "parsed": {
+        "_": [
+          "Note: Version bump only for package @standardnotes/web"
+        ]
+      }
+    },
+    {
+      "version": "3.184.2",
+      "title": "[3.184.2](https://github.com/standardnotes/app/compare/@standardnotes/web@3.184.1...@standardnotes/web@3.184.2) (2024-01-11)",
+      "date": null,
+      "body": "**Note:** Version bump only for package @standardnotes/web",
+      "parsed": {
+        "_": [
+          "Note: Version bump only for package @standardnotes/web"
+        ]
+      }
+    },
+    {
+      "version": "3.184.1",
+      "title": "[3.184.1](https://github.com/standardnotes/app/compare/@standardnotes/web@3.184.0...@standardnotes/web@3.184.1) (2024-01-10)",
+      "date": null,
+      "body": "**Note:** Version bump only for package @standardnotes/web",
+      "parsed": {
+        "_": [
+          "Note: Version bump only for package @standardnotes/web"
+        ]
+      }
+    },
+    {
+      "version": "3.184.0",
+      "title": "[3.184.0](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.44...@standardnotes/web@3.184.0) (2024-01-08)",
+      "date": null,
+      "body": "### Features\n\n* Added option to download multiple files as a zip when using the desktop app or a supported browser ([#2748](https://github.com/standardnotes/app/issues/2748)) ([130b63b](https://github.com/standardnotes/app/commit/130b63b1a51a52c547cc40cfc8352946920c5af3))",
+      "parsed": {
+        "_": [
+          "Added option to download multiple files as a zip when using the desktop app or a supported browser (#2748) (130b63b)"
+        ],
+        "Features": [
+          "Added option to download multiple files as a zip when using the desktop app or a supported browser (#2748) (130b63b)"
+        ]
+      }
+    },
+    {
+      "version": "3.183.44",
+      "title": "[3.183.44](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.43...@standardnotes/web@3.183.44) (2024-01-08)",
+      "date": null,
+      "body": "**Note:** Version bump only for package @standardnotes/web",
+      "parsed": {
+        "_": [
+          "Note: Version bump only for package @standardnotes/web"
+        ]
+      }
+    },
+    {
+      "version": "3.183.43",
+      "title": "[3.183.43](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.42...@standardnotes/web@3.183.43) (2024-01-06)",
+      "date": null,
+      "body": "**Note:** Version bump only for package @standardnotes/web",
+      "parsed": {
+        "_": [
+          "Note: Version bump only for package @standardnotes/web"
+        ]
+      }
+    },
+    {
+      "version": "3.183.42",
+      "title": "[3.183.42](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.41...@standardnotes/web@3.183.42) (2024-01-06)",
+      "date": null,
+      "body": "**Note:** Version bump only for package @standardnotes/web",
+      "parsed": {
+        "_": [
+          "Note: Version bump only for package @standardnotes/web"
+        ]
+      }
+    },
+    {
+      "version": "3.183.41",
+      "title": "[3.183.41](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.40...@standardnotes/web@3.183.41) (2024-01-05)",
+      "date": null,
+      "body": "**Note:** Version bump only for package @standardnotes/web",
+      "parsed": {
+        "_": [
+          "Note: Version bump only for package @standardnotes/web"
+        ]
+      }
+    },
+    {
       "version": "3.183.40",
       "title": "[3.183.40](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.39...@standardnotes/web@3.183.40) (2024-01-04)",
       "date": null,

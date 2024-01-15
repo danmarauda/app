@@ -97,9 +97,11 @@ import {
 import { CreatePayloadFromRawServerItem } from './Account/Utilities'
 import { DecryptedServerConflictMap, TrustedServerConflictMap } from './Account/ServerConflictMap'
 import { ContentType } from '@standardnotes/domain-core'
+import { SyncFrequencyGuardInterface } from './SyncFrequencyGuardInterface'
 
 const DEFAULT_MAJOR_CHANGE_THRESHOLD = 15
 const INVALID_SESSION_RESPONSE_STATUS = 401
+const TOO_MANY_REQUESTS_RESPONSE_STATUS = 429
 const DEFAULT_AUTO_SYNC_INTERVAL = 30_000
 
 /** Content types appearing first are always mapped first */
@@ -168,6 +170,7 @@ export class SyncService
     private readonly options: ApplicationSyncOptions,
     private logger: LoggerInterface,
     private sockets: WebSocketsService,
+    private syncFrequencyGuard: SyncFrequencyGuardInterface,
     protected override internalEventBus: InternalEventBusInterface,
   ) {
     super(internalEventBus)
@@ -642,7 +645,8 @@ export class SyncService
     const syncInProgress = this.opStatus.syncInProgress
     const databaseLoaded = this.databaseLoaded
     const canExecuteSync = !this.syncLock
-    const shouldExecuteSync = canExecuteSync && databaseLoaded && !syncInProgress
+    const syncLimitReached = this.syncFrequencyGuard.isSyncCallsThresholdReachedThisMinute()
+    const shouldExecuteSync = canExecuteSync && databaseLoaded && !syncInProgress && !syncLimitReached
 
     if (shouldExecuteSync) {
       this.syncLock = true
@@ -939,7 +943,7 @@ export class SyncService
       return
     }
 
-    if (options.checkIntegrity) {
+    if (options.checkIntegrity && online) {
       await this.notifyEventSync(SyncEvent.SyncRequestsIntegrityCheck, {
         source: options.source as SyncSource,
       })
@@ -998,6 +1002,10 @@ export class SyncService
 
     if (response.status === INVALID_SESSION_RESPONSE_STATUS) {
       void this.notifyEvent(SyncEvent.InvalidSession)
+    }
+
+    if (response.status === TOO_MANY_REQUESTS_RESPONSE_STATUS) {
+      void this.notifyEvent(SyncEvent.TooManyRequests)
     }
 
     this.opStatus?.setError(response.error)
@@ -1290,6 +1298,8 @@ export class SyncService
     this.opStatus.reset()
 
     this.lastSyncDate = new Date()
+
+    this.syncFrequencyGuard.incrementCallsPerMinute()
 
     if (operation instanceof AccountSyncOperation && operation.numberOfItemsInvolved >= this.majorChangeThreshold) {
       void this.notifyEvent(SyncEvent.MajorDataChange)

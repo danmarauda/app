@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.184.3](https://github.com/standardnotes/app/compare/@standardnotes/web@3.184.2...@standardnotes/web@3.184.3) (2024-01-12)
+
+**Note:** Version bump only for package @standardnotes/web
+
+## [3.184.2](https://github.com/standardnotes/app/compare/@standardnotes/web@3.184.1...@standardnotes/web@3.184.2) (2024-01-11)
+
+**Note:** Version bump only for package @standardnotes/web
+
+## [3.184.1](https://github.com/standardnotes/app/compare/@standardnotes/web@3.184.0...@standardnotes/web@3.184.1) (2024-01-10)
+
+**Note:** Version bump only for package @standardnotes/web
+
+# [3.184.0](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.44...@standardnotes/web@3.184.0) (2024-01-08)
+
+### Features
+
+* Added option to download multiple files as a zip when using the desktop app or a supported browser ([#2748](https://github.com/standardnotes/app/issues/2748)) ([130b63b](https://github.com/standardnotes/app/commit/130b63b1a51a52c547cc40cfc8352946920c5af3))
+
+## [3.183.44](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.43...@standardnotes/web@3.183.44) (2024-01-08)
+
+**Note:** Version bump only for package @standardnotes/web
+
+## [3.183.43](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.42...@standardnotes/web@3.183.43) (2024-01-06)
+
+**Note:** Version bump only for package @standardnotes/web
+
+## [3.183.42](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.41...@standardnotes/web@3.183.42) (2024-01-06)
+
+**Note:** Version bump only for package @standardnotes/web
+
+## [3.183.41](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.40...@standardnotes/web@3.183.41) (2024-01-05)
+
+**Note:** Version bump only for package @standardnotes/web
+
 ## [3.183.40](https://github.com/standardnotes/app/compare/@standardnotes/web@3.183.39...@standardnotes/web@3.183.40) (2024-01-04)
 
 **Note:** Version bump only for package @standardnotes/web
